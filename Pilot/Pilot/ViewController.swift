@@ -10,10 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var pilotLabel: UILabel!
+    @IBOutlet weak var underPilotLabel: UILabel!
+    var timesClicked=0
     @IBAction func starButton(_ sender: UIButton) {
+        timesClicked=timesClicked+1
+        underPilotLabel.text="Start clicked \(timesClicked) time(s)."
         
-        pilotLabel.text = "Start"
+        
         
     }
     override func viewDidLoad() {
